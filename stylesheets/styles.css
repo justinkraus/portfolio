@@ -214,6 +214,7 @@ transition: 3s all 2s
 }
 
 /*project gallery specific stuff*/
+/*https://css-tricks.com/adaptive-photo-layout-with-flexbox/*/
 
 /** {
     box-sizing: border-box;
@@ -222,36 +223,38 @@ transition: 3s all 2s
 section ul {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0px;
+/*    padding: 0 0px;*/
     list-style-type: none;
+    overflow: hidden;
+  flex: 0 0 33.333333%;
 }
 
 section li {
-    flex: 33%;
-    max-width: 33%;
+    /*min-width: 0;*/
+    /*max-width: 33%;*/
+    height:30vh;
     padding: 0 0px;
+    align-content: start;
+/*    flex: 0 0 33.333333%;*/
 }
 
 section img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-}
-
-/*section li {
-  height: 40vh;
-  flex: 33%;
-  max-width: 33%;
-  flex-grow: 1;
-  padding: 0 1px;
-}
-
-section img {
+    vertical-align: bottom;
     max-height: 100%;
     min-width: 100%;
     object-fit: cover;
-    vertical-align: bottom;
-}*/
+}
+
+/*project titles*/
+section li .project-title{
+  visibility: hidden;
+  position:absolute;
+  
+}
+
+section li:hover .project-title{
+  visibility: visible;
+}
 
 @media print, screen and (max-width: 960px) {
 
@@ -306,7 +309,16 @@ section img {
         flex: 50%;
         max-width: 50%;
         padding: 0 0px;
+        height:33vh;
+        align-content: start;
     }
+
+  section img {
+/*    vertical-align: bottom;*/
+    max-height: 100%;
+    min-width: 100%;
+/*    object-fit: cover;*/
+}
 
 }
 
@@ -326,6 +338,16 @@ section img {
   pre, code {
     word-wrap:normal;
   }
+
+  section li {
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 0px;
+    height:55vh;
+    align-content: start;
+    overflow:visible;
+}
+
 }
 
 @media print, screen and (max-width: 480px) {
@@ -345,6 +367,9 @@ section img {
       flex: 100%;
       max-width: 100%;
       padding: 0 0px;
+      height:45vh;
+    align-content: start;
+    overflow:visible;
   }
 }
 
