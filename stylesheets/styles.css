@@ -249,11 +249,17 @@ section img {
 section li .project-title{
   visibility: hidden;
   position:absolute;
-  
+  min-width: 100%;
+}
+
+section li:hover img{
+  opacity: 20%;
+  z-index:1;
 }
 
 section li:hover .project-title{
   visibility: visible;
+  z-index:2;
 }
 
 @media print, screen and (max-width: 960px) {
