@@ -110,6 +110,10 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+header span {
+  color:black;
+}
+
 header ul {
   list-style:none;
   height:40px;
@@ -174,7 +178,8 @@ section {
   width:auto;
   float:left;
   padding-bottom:50px;
-  padding-left: 120px;
+/*  add this back in to allow for first column*/
+/*  padding-left: 120px;*/
 }
 
 small {
@@ -232,9 +237,10 @@ section ul {
 section li {
     /*min-width: 0;*/
     /*max-width: 33%;*/
-    height:30vh;
-    padding: 0 0px;
+    height:25vh;
+    padding: 5px 5px;
     align-content: start;
+/*    box-shadow: 5px 5px;*/
 /*    flex: 0 0 33.333333%;*/
 }
 
@@ -246,10 +252,17 @@ section img {
 }
 
 /*project titles*/
+
+section li .title-container{
+  position:relative;
+}
+
 section li .project-title{
   visibility: hidden;
   position:absolute;
-  min-width: 100%;
+  text-align: center;
+  width:100%;
+/*  font-size: x-large;*/
 }
 
 section li:hover img{
@@ -311,19 +324,52 @@ section li:hover .project-title{
     margin-right: 20px;
   }
 
+  section ul {
+    display: flex;
+    flex-wrap: wrap;
+/*    padding: 0 0px;*/
+    list-style-type: none;
+    overflow: hidden;
+  flex: 0 0 50%;
+}
+
   section li {
-        flex: 50%;
-        max-width: 50%;
-        padding: 0 0px;
-        height:33vh;
+/*        flex: 50%;
+        max-width: 50%;*/
+        padding: 5 5px;
+        height:25vh;
         align-content: start;
     }
 
   section img {
-/*    vertical-align: bottom;*/
+    vertical-align: bottom;
     max-height: 100%;
     min-width: 100%;
-/*    object-fit: cover;*/
+    object-fit: cover;
+}
+
+/*project titles*/
+
+section li .title-container{
+  position:relative;
+}
+
+section li .project-title{
+  visibility: hidden;
+  position:absolute;
+  text-align: center;
+  width:100%;
+/*  font-size: x-large;*/
+}
+
+section li:hover img{
+  opacity: 20%;
+  z-index:1;
+}
+
+section li:hover .project-title{
+  visibility: visible;
+  z-index:2;
 }
 
 }
