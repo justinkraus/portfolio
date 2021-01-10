@@ -395,6 +395,15 @@ section li:hover .project-title{
   section li {
         height:20vh;
     }
+  section li .project-title h1{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+section li .project-title h2{
+  font-size: 1em;
+  margin-bottom: 5px;
+}
 }
 
 @media print, screen and (max-width: 760px) {
@@ -425,7 +434,7 @@ section li:hover .project-title{
 
   section img {
     vertical-align: bottom;
-    max-height: 80%;
+    max-height: 70%;
     min-width: 100%;
     /*object-fit: cover;*/
 }
@@ -441,7 +450,7 @@ section li .title-container{
 section li .project-title{
   visibility: visible;
   position:relative;
-  text-align: center;
+  text-align: left;
   width:100%;
   /*font-size: x-large;*/
 }
@@ -496,14 +505,14 @@ section li:hover .project-title{
 }
 
   section img {
-    vertical-align: bottom;
-    max-height: 70%;
+    vertical-align: top;
+    max-height: 50%;
     min-width: 100%;
     /*object-fit: cover;*/
 }
 
 section h1 {
-  text-align: center;
+/*  text-align: center;*/
 }
 
 /*project titles*/
@@ -517,7 +526,7 @@ section li .title-container{
 section li .project-title{
   visibility: visible;
   position:relative;
-  text-align: center;
+  text-align: left;
   width:100%;
   /*font-size: x-large;*/
 }
