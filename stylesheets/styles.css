@@ -285,11 +285,11 @@ section li:hover .project-title{
     }
 }
 
-@media print, screen and (max-width: 1350px) {
+/*@media print, screen and (max-width: 1350px) {
   section li {
         height:20vh;
     }
-}
+}*/
 
 
 @media print, screen and (max-width: 1100px) {
