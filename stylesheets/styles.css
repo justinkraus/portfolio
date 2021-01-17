@@ -475,6 +475,11 @@ section li .project-title h2{
   margin-bottom: 5px;
 }
 
+section li:hover img{
+  opacity: 100%;
+  z-index:1;
+}
+
 
 /*section li:hover img{
   opacity: 20%;
