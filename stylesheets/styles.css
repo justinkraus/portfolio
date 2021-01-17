@@ -56,6 +56,16 @@ a:hover small {
   color:#777;
 }
 
+.projlinks{
+  color:#39c;
+  font-size:1.25em;
+  text-decoration:none;
+}
+
+.projlinks:hover{
+  color:#069;
+}
+
 /*.wrapper {
   width:920px;
   margin:0 auto;
